@@ -1,0 +1,23 @@
+PRIMITIVE LOGISTICS - CONTROLS
+
+MOUSE: Hold the left mouse button on a log and drag it. Release to let go.
+SPACE: Hold to push the pallet. Release to slow down.
+R: Restore the current checkpoint, including the robot, pallet and checkpoint log allowance.
+ESC: Pause or resume. The pause menu also offers checkpoint recovery and return to the menu.
+
+DELIVERY TIPS
+Start with three logs. A fourth log waits beside the route.
+Move logs from behind the pallet to the front to keep the delivery rolling.
+Use logs to bridge pits and give the worker a surface to walk across.
+Use a log to push the boulder into its pit.
+Tip the robot sideways to get under the low ceiling.
+Fast movement and impacts can knock the robot off the pallet.
+
+CHECKPOINTS
+Passing a checkpoint saves progress automatically.
+R recovers logs that were left behind or fell off-screen.
+Early checkpoints restore three logs; checkpoint 3 onward restores four.
+CONTINUE DELIVERY resumes the saved checkpoint after restarting the game.
+
+SOUND
+Use the SOUND slider in HOW TO PLAY to adjust music and sound effects.

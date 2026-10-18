@@ -1,0 +1,8 @@
+PRIMITIVE LOGISTICS
+Ludum Dare 60 - Old Tech
+
+Engine: made with Unity.
+Sound effects: generated with jsfxr, with additional free sound assets from Pixabay (https://pixabay.com/).
+Artwork: mainly self-drawn using visual references, with some AI-generated UI elements.
+Modeling: self-assembled from simple shapes, with some procedurally generated meshes.
+Development assistance: AI-assisted coding.

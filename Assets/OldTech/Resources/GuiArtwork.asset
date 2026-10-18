@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7270de1d08abaca4897c66b6fe206627, type: 3}
+  m_Name: GuiArtwork
+  m_EditorClassIdentifier: 
+  images:
+  - name: MenuPanel
+    texture: {fileID: 2800000, guid: e6b33f3f983c36f409749eb466eb657f, type: 3}
+    region:
+      serializedVersion: 2
+      x: 0.020733653
+      y: 0.040669855
+      width: 0.95933014
+      height: 0.9130781
+  - name: PausePanel
+    texture: {fileID: 2800000, guid: a3649a9597ebd1e40899ce0624321d62, type: 3}
+    region:
+      serializedVersion: 2
+      x: 0.020733653
+      y: 0.040669855
+      width: 0.95933014
+      height: 0.9130781
+  - name: HelpPanel
+    texture: {fileID: 2800000, guid: 5953c01b08955d34eb99d4a6caa48386, type: 3}
+    region:
+      serializedVersion: 2
+      x: 0.020733653
+      y: 0.040669855
+      width: 0.95933014
+      height: 0.9130781
+  - name: SettingsPanel
+    texture: {fileID: 2800000, guid: efe97fcfe5b6fd643948512078263eb7, type: 3}
+    region:
+      serializedVersion: 2
+      x: 0.020733653
+      y: 0.040669855
+      width: 0.95933014
+      height: 0.9130781
+  - name: ResultsPanel
+    texture: {fileID: 2800000, guid: a5ab347376ff7b34f8969a1ed1e91e9b, type: 3}
+    region:
+      serializedVersion: 2
+      x: 0.020733653
+      y: 0.040669855
+      width: 0.95933014
+      height: 0.9130781
+  - name: HudPanel
+    texture: {fileID: 2800000, guid: a6f2f03376dee2f438b74b93271aa56e, type: 3}
+    region:
+      serializedVersion: 2
+      x: 0.009668509
+      y: 0.18508287
+      width: 0.9811234
+      height: 0.6353591
+  - name: HintPanel
+    texture: {fileID: 2800000, guid: 44222477701b45a4da9aa5bf0a7ab951, type: 3}
+    region:
+      serializedVersion: 2
+      x: 0.009668509
+      y: 0.18508287
+      width: 0.9811234
+      height: 0.6353591
+  - name: ControlsBar
+    texture: {fileID: 2800000, guid: bd9c1f199859cab4890a4d09a92f16d0, type: 3}
+    region:
+      serializedVersion: 2
+      x: 0.009668509
+      y: 0.18508287
+      width: 0.9811234
+      height: 0.6353591
+  - name: ButtonNormal
+    texture: {fileID: 2800000, guid: 33a0481c940f2d642b0a50da30ecbc61, type: 3}
+    region:
+      serializedVersion: 2
+      x: 0.005524862
+      y: 0.06767956
+      width: 0.98895025
+      height: 0.8632597
+  - name: ButtonHover
+    texture: {fileID: 2800000, guid: c5c466241e1c7ef42aefb9f116b10808, type: 3}
+    region:
+      serializedVersion: 2
+      x: 0.005524862
+      y: 0.06767956
+      width: 0.98895025
+      height: 0.8632597
+  - name: ButtonPressed
+    texture: {fileID: 2800000, guid: 130dbae1a64b3b445af92217b6b1ad2c, type: 3}
+    region:
+      serializedVersion: 2
+      x: 0.005524862
+      y: 0.06767956
+      width: 0.98895025
+      height: 0.8632597
+  - name: ButtonDisabled
+    texture: {fileID: 2800000, guid: bf03d4c67aa9d994b80a5b2572399bf0, type: 3}
+    region:
+      serializedVersion: 2
+      x: 0.005524862
+      y: 0.06767956
+      width: 0.98895025
+      height: 0.8632597
+  - name: SliderTrack
+    texture: {fileID: 2800000, guid: 826642c1a89da8146bcef1921e633651, type: 3}
+    region:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+  - name: SliderThumb
+    texture: {fileID: 2800000, guid: c464020d13bf5ea4f958bf511b69a4e5, type: 3}
+    region:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+  - name: ModalShade
+    texture: {fileID: 2800000, guid: bbd2261cdf5a3d64c95110c94644ed45, type: 3}
+    region:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1

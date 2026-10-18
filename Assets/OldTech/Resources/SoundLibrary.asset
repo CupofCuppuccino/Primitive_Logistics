@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd2c10d597dd6184f97ec3eca7c1bcdc, type: 3}
+  m_Name: SoundLibrary
+  m_EditorClassIdentifier: 
+  sounds:
+  - cue: 0
+    clip: {fileID: 8300000, guid: 70c01db4f5ec81943a7b51d7c0fdc896, type: 3}
+    level: 0.65
+    minimumInterval: 0.06
+  - cue: 1
+    clip: {fileID: 8300000, guid: da75a474261dcc74dbc3aff726c5d2f9, type: 3}
+    level: 0.65
+    minimumInterval: 0.08
+  - cue: 2
+    clip: {fileID: 8300000, guid: 2621c70e133fce842af2a238da1d216a, type: 3}
+    level: 0.9
+    minimumInterval: 0.09
+  - cue: 11
+    clip: {fileID: 8300000, guid: 4dc07e7b7faafc24eb217ed3b43d5bde, type: 3}
+    level: 0.8
+    minimumInterval: 0.2
+  - cue: 3
+    clip: {fileID: 8300000, guid: b7207be5faf789845b3a5da30fc1a480, type: 3}
+    level: 0.85
+    minimumInterval: 0.15
+  - cue: 4
+    clip: {fileID: 8300000, guid: 090aff3430e5bad4bb201ca9ff2c8811, type: 3}
+    level: 0.85
+    minimumInterval: 0.12
+  - cue: 5
+    clip: {fileID: 8300000, guid: 090aff3430e5bad4bb201ca9ff2c8811, type: 3}
+    level: 0.65
+    minimumInterval: 0.1
+  - cue: 6
+    clip: {fileID: 8300000, guid: b8985bd2e3fe6c34a83ba8d00b7bb371, type: 3}
+    level: 0.8
+    minimumInterval: 0.5
+  - cue: 7
+    clip: {fileID: 8300000, guid: 2c6c8e12a84361e488b863fb7cd7fe5c, type: 3}
+    level: 0.85
+    minimumInterval: 0.3
+  - cue: 8
+    clip: {fileID: 8300000, guid: 76b74646d97b6e242a0b42a63339db39, type: 3}
+    level: 0.4
+    minimumInterval: 0.16
+  - cue: 9
+    clip: {fileID: 8300000, guid: a60b8f11580e25b4ea4b3ce785c8803e, type: 3}
+    level: 0.45
+    minimumInterval: 0
+  - cue: 10
+    clip: {fileID: 8300000, guid: a1167af20bfdf0846a7eb12f53121402, type: 3}
+    level: 0.55
+    minimumInterval: 0
