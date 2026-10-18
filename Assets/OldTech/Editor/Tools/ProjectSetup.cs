@@ -67,6 +67,8 @@ namespace OldTech.Editor
                 else if (request == "CHECK_ATMOSPHERE") AtmosphereChecks.Run();
                 else if (request == "CHECK_STARTUP") SceneStartupChecks.Run();
                 else if (request == "CHECK_PHYSICS") PhysicsChecks.Run();
+                else if (request == "CHECK_ROBOT_DAMAGE") ImpactDamageChecks.RunFromEditor();
+                else if (request == "OPEN_GAME") EditorSceneManager.OpenScene(GameSceneBuilder.ScenePath);
                 else if (request == "DIAGNOSE") DiagnoseSceneScripts();
                 else if (request == "OPEN_MENU") OpenMainMenu();
                 else if (request == "BUILD_ONLY")

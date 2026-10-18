@@ -34,7 +34,14 @@ namespace OldTech
         private void OnCollisionEnter(Collision collision)
         {
             if (session == null || session.InputBlocked || Time.time < ignoreUntil) return;
-            if (collision.relativeVelocity.magnitude < session.Settings.impactThreshold) return;
+            // The worker and pallet remain solid, but their supporting/blocking contacts
+            // must never count as damage to the delivery. This includes child PalletEdges.
+            if (collision.collider.GetComponentInParent<WorkerVisual>() != null ||
+                collision.collider.GetComponentInParent<CargoMotor>() != null) return;
+            float impactSpeed = 0f;
+            for (int i = 0; i < collision.contactCount; i++)
+                impactSpeed = Mathf.Max(impactSpeed, Mathf.Abs(Vector3.Dot(collision.relativeVelocity, collision.GetContact(i).normal)));
+            if (impactSpeed < session.Settings.impactThreshold) return;
             ignoreUntil = Time.time + 0.65f;
             session.RecordImpact();
         }
