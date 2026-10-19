@@ -38,6 +38,7 @@ files.extend([
     ("CONTROLS.txt", (ROOT / "Documentation/ReleaseControls.txt").read_bytes()),
     ("GAME_DESCRIPTION.txt", description.encode("utf-8")),
     ("CREDITS.txt", (ROOT / "Documentation/Credits.txt").read_bytes()),
+    ("UPDATE_NOTES.md", (ROOT / "Documentation/UpdateNotes.md").read_bytes()),
 ])
 
 DEST.parent.mkdir(parents=True, exist_ok=True)

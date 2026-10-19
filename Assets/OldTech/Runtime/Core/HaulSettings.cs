@@ -8,7 +8,7 @@ namespace OldTech
     {
         [Header("Cargo")]
         [Range(10f, 60f)] public float cargoMass = 24f;
-        [Range(0.5f, 7f)] public float pushAcceleration = 3.4f;
+        [Range(0.5f, 7f)] public float pushAcceleration = 2.9f;
         [Range(0.5f, 5f)] public float topSpeed = 2.6f;
         [Range(0.1f, 6f)] public float braking = 2.3f;
 

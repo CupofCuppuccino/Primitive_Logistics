@@ -6,6 +6,12 @@ namespace OldTech.Editor
 {
     public static class UiArtworkPreviewChecks
     {
+        public static void RunMenuOnly()
+        {
+            SessionState.SetBool(UiArtworkPreview.MenuOnlyKey, true);
+            Run();
+        }
+
         [MenuItem("Old Tech/Preview painted UI in game")]
         public static void Run()
         {

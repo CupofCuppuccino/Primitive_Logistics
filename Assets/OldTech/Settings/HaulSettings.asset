@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HaulSettings
   m_EditorClassIdentifier: 
   cargoMass: 24
-  pushAcceleration: 3.4
+  pushAcceleration: 2.9
   topSpeed: 2.6
   braking: 2.3
   robotMass: 16

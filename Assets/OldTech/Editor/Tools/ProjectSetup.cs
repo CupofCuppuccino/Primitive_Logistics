@@ -47,6 +47,7 @@ namespace OldTech.Editor
                 else if (request == "REPLACE_FIRE") AtmosphereArtSetup.ReplaceFireFrames();
                 else if (request == "APPLY_UI") GuiArtworkSetup.Apply();
                 else if (request == "APPLY_CHECKPOINT_MENU") MenuBackdropSetup.Apply();
+                else if (request == "APPLY_MENU_LOG_GUIDE") MenuLogGuideSetup.Apply();
                 else if (request == "APPLY_WORKER_COLLISION") WorkerCollisionSetup.Apply();
                 else if (request == "APPLY_SFX") SoundEffectsSetup.Apply();
                 else if (request == "BUILD_SUBMISSION") SubmissionBuild.Build();
@@ -63,6 +64,7 @@ namespace OldTech.Editor
                 else if (request == "AUDIT_SUBMISSION") SubmissionBuild.AuditExistingRelease();
                 else if (request == "EXPORT_SOURCE_MANIFEST") SourceSubmissionChecks.ExportManifest();
                 else if (request == "PREVIEW_UI") UiArtworkPreviewChecks.Run();
+                else if (request == "PREVIEW_MENU") UiArtworkPreviewChecks.RunMenuOnly();
                 else if (request == "MOVE_DELIVERY") PuzzleCourseSetup.MoveDeliveryCheckpoint();
                 else if (request == "CHECK_ATMOSPHERE") AtmosphereChecks.Run();
                 else if (request == "CHECK_STARTUP") SceneStartupChecks.Run();

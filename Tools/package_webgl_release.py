@@ -33,7 +33,7 @@ DEST.parent.mkdir(parents=True, exist_ok=True)
 with zipfile.ZipFile(DEST, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
     for path in files:
         archive.write(path, path.relative_to(SOURCE).as_posix())
-    for name, doc in [("README.txt", "ReleaseReadmeWebGL.txt"), ("CONTROLS.txt", "ReleaseControls.txt"), ("CREDITS.txt", "Credits.txt")]:
+    for name, doc in [("README.txt", "ReleaseReadmeWebGL.txt"), ("CONTROLS.txt", "ReleaseControls.txt"), ("CREDITS.txt", "Credits.txt"), ("UPDATE_NOTES.md", "UpdateNotes.md")]:
         archive.writestr(name, (ROOT / "Documentation" / doc).read_bytes())
 with zipfile.ZipFile(DEST) as archive:
     assert "index.html" in archive.namelist()

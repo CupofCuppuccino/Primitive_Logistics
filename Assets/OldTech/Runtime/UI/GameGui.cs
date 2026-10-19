@@ -13,6 +13,7 @@ namespace OldTech
         public static GUIStyle Heading { get; private set; }
         public static GUIStyle Text { get; private set; }
         public static GUIStyle Small { get; private set; }
+        public static GUIStyle MenuQuote { get; private set; }
         private static GUIStyle button, buttonHovered, passwordField;
         private static GUIStyle sliderTrack, sliderThumb;
 
@@ -37,6 +38,8 @@ namespace OldTech
             Heading = new GUIStyle(Text) { fontSize = 26, fontStyle = FontStyle.Bold };
             SetTextColor(Heading, Red);
             Small = new GUIStyle(Text) { fontSize = 14 };
+            MenuQuote = new GUIStyle(Text) { fontSize = 14, wordWrap = false };
+            SetTextColor(MenuQuote, Red);
             button = new GUIStyle(Text) { fontSize = 21, fontStyle = FontStyle.Bold, alignment = TextAnchor.MiddleCenter };
             SetTextColor(button, Red);
             buttonHovered = new GUIStyle(button) { fontSize = 23 };
@@ -161,7 +164,7 @@ namespace OldTech
 
         public static void Controls(Rect rect)
         {
-            string text = "MOUSE / Drag logs.\nSPACE / Hold to push, release to slow down.\nR / Restore the current checkpoint and its logs.\nESC / Pause or return to the menu.";
+            string text = "MOUSE drag wood\nSPACE hold to push cart\nR / Restore the current checkpoint and its logs.\nESC / Pause or return to the menu.";
             if (DeveloperMode.IsUnlocked)
                 text += "\n0-9 / Jump to checkpoints (also numpad).\nF1 / Open physics settings.";
             Label(rect, text);

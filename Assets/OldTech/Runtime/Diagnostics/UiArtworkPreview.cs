@@ -11,8 +11,10 @@ namespace OldTech
     public sealed class UiArtworkPreview : MonoBehaviour
     {
         public const string ActiveKey = "OldTech.UiArtworkPreview.Active";
+        public const string MenuOnlyKey = "OldTech.UiArtworkPreview.MenuOnly";
         private const string Output = "Logs/PaintedUi/Preview/";
         private string failure;
+        private bool menuOnly;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void Launch()
@@ -30,10 +32,13 @@ namespace OldTech
         private IEnumerator Start()
         {
             Directory.CreateDirectory(Output);
+            menuOnly = SessionState.GetBool(MenuOnlyKey, false);
+            SessionState.SetBool(MenuOnlyKey, false);
             GameProgress.UseEditorSmokeSave = true;
             GameProgress.ClearSmokeSave();
             yield return new WaitForSecondsRealtime(0.6f);
             yield return Capture("Menu.png");
+            if (menuOnly) { Finish(null); yield break; }
             MainMenuController menu = FindObjectOfType<MainMenuController>();
             typeof(MainMenuController).GetProperty("ControlsOpen").SetValue(menu, true);
             yield return Capture("Help.png");
@@ -91,8 +96,9 @@ namespace OldTech
         private void Finish(string error)
         {
             if (error != null) failure = error;
-            File.WriteAllText(Output + "Validation.txt", failure == null ?
-                "PASS: Menu, help, developer password rejection/unlock, HUD, checkpoint 3, pause, settings, four-frame fire and results captured with actual picture UI and text. No runtime exceptions." : "FAIL: " + failure);
+            File.WriteAllText(Output + "Validation.txt", failure != null ? "FAIL: " + failure : menuOnly ?
+                "PASS: Main menu captured with actual picture UI and text. No runtime exceptions." :
+                "PASS: Menu, help, developer password rejection/unlock, HUD, checkpoint 3, pause, settings, four-frame fire and results captured with actual picture UI and text. No runtime exceptions.");
             Time.timeScale = 1f;
             GameProgress.UseEditorSmokeSave = false;
             EditorApplication.isPlaying = false;

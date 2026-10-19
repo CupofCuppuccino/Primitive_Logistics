@@ -33,6 +33,8 @@ namespace OldTech
             GameGui.Panel(new Rect(x, top, 510f, 605f), image: GuiImageId.MenuPanel);
             GameGui.Label(new Rect(x + 36f, top + 32f, 440f, 130f), "PRIMITIVE\nLOGISTICS", GameGui.Title);
             GameGui.Label(new Rect(x + 39f, top + 165f, 425f, 60f), "Log: An easy solution for transport or recording");
+            GameGui.Label(new Rect(x + 39f, top + 196f, 425f, 20f),
+                "Chief: Something new? Roll it back to Camp! KEEP PUSHING!", GameGui.MenuQuote);
             bool canContinue = GameProgress.HasActiveSave;
             GUI.enabled = !ControlsOpen;
             string continueText = "CONTINUE DELIVERY";

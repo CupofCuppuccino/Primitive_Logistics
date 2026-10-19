@@ -41,8 +41,8 @@ namespace OldTech
             GameGui.Label(new Rect(w - 302f, 66f, 260f, 30f), "CHECKPOINT " + session.Checkpoints.CurrentIndex + " / " + session.Settings.checkpointPositions.Length, GameGui.Small);
             GameGui.Panel(new Rect(18f, h - 84f, w - 36f, 65f), image: GuiImageId.ControlsBar);
             GameGui.Label(new Rect(43f, h - 65f, w - 85f, 35f), DeveloperMode.IsUnlocked ?
-                "MOUSE  drag     SPACE  push     R  restore     0-9  jump     F1  tune     ESC  pause" :
-                "MOUSE  drag     SPACE  push     R  restore     ESC  pause", GameGui.Text);
+                "MOUSE drag wood     SPACE hold to push cart     R  restore     0-9  jump     F1  tune     ESC  pause" :
+                "MOUSE drag wood     SPACE hold to push cart     R  restore     ESC  pause", GameGui.Text);
             if (!string.IsNullOrEmpty(session.Hint))
             {
                 GameGui.Panel(new Rect(w * 0.5f - 455f, h - 147f, 910f, 48f), image: GuiImageId.HintPanel);
