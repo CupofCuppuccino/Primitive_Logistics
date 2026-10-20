@@ -65,10 +65,12 @@ namespace OldTech
 
         public void SetTarget(Vector3 worldTarget)
         {
-            float cargoX = cargo.Body != null ? cargo.Body.position.x : cargo.transform.position.x;
-            float x = Mathf.Clamp(worldTarget.x, cargoX - 10f, cargoX + 10f);
-            float floor = RouteGeometry.HeightAt(x) + 0.5f;
-            target = new Vector3(x, Mathf.Clamp(worldTarget.y, floor, Mathf.Max(cargo.transform.position.y, floor) + 6.5f), 0f);
+            Vector3 cargoPosition = cargo.Body != null ? cargo.Body.position : cargo.transform.position;
+            float x = Mathf.Clamp(worldTarget.x, cargoPosition.x - 10f, cargoPosition.x + 10f);
+            // Limit reach around the pallet; real colliders stop the log at edited terrain.
+            // The generated route profile can otherwise leave an invisible floor above a lowered hill.
+            float y = Mathf.Clamp(worldTarget.y, cargoPosition.y - 6.5f, cargoPosition.y + 6.5f);
+            target = new Vector3(x, y, 0f);
         }
 
         public void BeginGrab(RollingLog log, Vector3 pointer)

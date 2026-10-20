@@ -1,8 +1,6 @@
-# Terrain & Route Polish — v1.3
+# Dragging Fix — v1.3.1
 
-- Reshaped the hills around checkpoints 04 and 06, with gentler slopes and a lower final climb.
-- Updated the terrain fill to follow the new landscape.
-- Adjusted pit logs, boulder placement, and low-ceiling clearance.
-- Added more route hints for moving logs and handling downhills.
+- Fixed logs hovering at the old terrain height while held near checkpoint 06.
+- Logs can now be dragged down to the lowered terrain without releasing the mouse. Ground and obstacle collisions still apply.
 
 Updated Windows and browser builds are available.
