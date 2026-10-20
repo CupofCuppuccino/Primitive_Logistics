@@ -11,6 +11,42 @@ namespace OldTech.Editor
     public static class LogGrabberChecks
     {
         private const float Step = 1f / 90f;
+        private const string LiveAudit = "OldTech.LogGrabberChecks.LiveAudit";
+
+        public static void AuditInPlayMode()
+        {
+            EditorSceneManager.SaveOpenScenes();
+            SessionState.SetBool(LiveAudit, true);
+            EditorApplication.isPlaying = true;
+        }
+
+        [InitializeOnLoadMethod]
+        private static void RegisterLiveAudit()
+        {
+            EditorApplication.update += AuditLoadedPlayCode;
+        }
+
+        private static void AuditLoadedPlayCode()
+        {
+            if (!SessionState.GetBool(LiveAudit, false) || !EditorApplication.isPlaying ||
+                EditorApplication.isCompiling || EditorApplication.isUpdating) return;
+            HaulSession session = UnityEngine.Object.FindObjectOfType<HaulSession>();
+            if (session == null || !session.Ready) return;
+            SessionState.SetBool(LiveAudit, false);
+            byte[] code = typeof(LogGrabber).GetMethod(nameof(LogGrabber.SetTarget)).GetMethodBody().GetILAsByteArray();
+            int oldFloor = typeof(RouteGeometry).GetMethod(nameof(RouteGeometry.HeightAt)).MetadataToken;
+            bool stale = false;
+            for (int i = 0; i + 4 < code.Length; i++)
+                if ((code[i] == 0x28 || code[i] == 0x6f) && BitConverter.ToInt32(code, i + 1) == oldFloor)
+                    stale = true;
+            Directory.CreateDirectory("Logs/LogDragging");
+            string report = (stale ? "FAIL" : "PASS") + ": Current editor Play mode is ready; checkpoint=" +
+                session.Checkpoints.CurrentIndex + "; loaded SetTarget IL bytes=" + code.Length +
+                "; old terrain height clamp=" + stale + "; assembly=" + typeof(LogGrabber).Assembly.Location;
+            File.WriteAllText("Logs/LogDragging/LiveEditor.txt", report);
+            if (stale) Debug.LogError(report);
+            else Debug.Log(report);
+        }
 
         [MenuItem("Old Tech/Validate log dragging on edited terrain")]
         public static void Run()
