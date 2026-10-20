@@ -1,8 +1,8 @@
-# Small Update — KEEP PUSHING!
+# Terrain & Route Polish — v1.3
 
-- Added a message from the Chief to the main menu: "Chief: Something new? Roll it back to Camp! KEEP PUSHING!"
-- Added a dashed log and a curved arrow to illustrate moving a log into position.
-- Clarified the controls: **MOUSE drag wood** and **SPACE hold to push cart**.
-- Reduced push strength to **2.9** for a gentler push.
+- Reshaped the hills around checkpoints 04 and 06, with gentler slopes and a lower final climb.
+- Updated the terrain fill to follow the new landscape.
+- Adjusted pit logs, boulder placement, and low-ceiling clearance.
+- Added more route hints for moving logs and handling downhills.
 
 Updated Windows and browser builds are available.
